@@ -11,12 +11,7 @@ import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
-// import { FaInstagram } from "react-icons/fa";
 import InstagramIcon from "@material-ui/icons/Instagram";
-// import
-// import Avatar from "@material-ui/core/Avatar";
-// import BookmarkBorderIcon from "@material-ui/icons/BookmarkBorder";
-// import Pagination from "@material-ui/lab/Pagination";
 import tiger from "./img/tiger.png";
 import one from "./img/1.png";
 import two from "./img/2.png";
@@ -29,6 +24,9 @@ import eight from "./img/8.png";
 import nine from "./img/9.png";
 import ten from "./img/10.png";
 import eleven from "./img/11.png";
+import { SiTiktok } from "react-icons/si";
+import { FaInstagram } from "react-icons/fa";
+
 const useStyles = makeStyles((theme) => ({
   appBar: {
     backgroundColor: "#fff",
@@ -40,8 +38,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    position: "relative",
+    position: "flex",
     display: "flex",
+    fontFamily: "AssistantRegular",
     justifyContent: "center",
     alignItems: "center",
     color: "#fff",
@@ -80,8 +79,12 @@ const useStyles = makeStyles((theme) => ({
   },
   instagram: {
     display: "flex",
-    paddingLeft: 10,
+    position: "relative",
+    paddingLeft: 4,
     color: "orange",
+  },
+  youtube: {
+    paddingLeft: "15%",
   },
 }));
 
@@ -104,14 +107,51 @@ function App() {
           href="https://www.instagram.com/real_himalayan_den/"
           target="_blank"
         >
-          <InstagramIcon />
+          <FaInstagram />
         </a>
-        {/* <InstagramIcon
-          size="lg"
-         
-        /> */}
+        <a
+          className={classes.instagram}
+          href="https://www.tiktok.com/@realhimalayanden"
+          target="_blank"
+        >
+          <SiTiktok />
+        </a>
       </Box>
       <Container maxWidth="lg" className={classes.blogsContainer}>
+        <Typography variant="h4" className={classes.blogTitle}>
+          Tiger's Anthem
+        </Typography>
+
+        <Grid className={classes.youtube} item xs={12} sm={6} md={10}>
+          <Card>
+            <CardActionArea>
+              <CardMedia className={classes.media}>
+                {" "}
+                <iframe
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                  }}
+                  src={`https://www.youtube.com/embed/XJw9cuNhbRE`}
+                  frameBorder="0"
+                  title="tiger-video"
+                  allow="autoplay; encrypted-media"
+                />
+              </CardMedia>
+              {/* className={classes.media}
+                image={eight}
+                title="Contemplative Reptile"
+                
+              /> */}
+            </CardActionArea>
+
+            <CardActions className={classes.cardActions}></CardActions>
+          </Card>
+        </Grid>
+        <br></br>
         <Typography variant="h4" className={classes.blogTitle}>
           Tiger's Merch
         </Typography>
@@ -189,8 +229,8 @@ function App() {
                   >
                     Tiger is challenging societal norms and values. They say men
                     can’t multi task but tiger is running on a treadmill with
-                    dumbbells on. So this is for all you feminists out there.
-                    Tiger is breaking stereotypes against men
+                    dumbbells. So this is for all you feminists out there. Tiger
+                    is breaking stereotypes against men
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -216,7 +256,7 @@ function App() {
                     component="p"
                   >
                     Tiger is a snack so when you want to eat Him, you don’t need
-                    to bring a plate or a spooon. He has them on his t shirt.
+                    to bring a plate or a spoon. He has them on his t shirt.
                     Just dive in 😜
                   </Typography>
                 </CardContent>
@@ -235,16 +275,16 @@ function App() {
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Cheers
+                    Tiger is lop
                   </Typography>
                   <Typography
                     variant="body2"
                     color="textSecondary"
                     component="p"
                   >
-                    Life is an amazing gift from our parents so every morning
-                    Tiger starts his day with a Bloody Mary and thanks everyone
-                    around him. This is why this t shirt is called Cheers.
+                    Tiger is ugly but still gets mad love from girls.We call
+                    that lop. Tiger's one of the ways to spread his lop is by
+                    giving mod to the girls as soon as they join his club.
                   </Typography>
                 </CardContent>
               </CardActionArea>
@@ -270,7 +310,7 @@ function App() {
                     component="p"
                   >
                     You are what you eat. Tiger had the fortune of eating a
-                    goats pussy. This is why tiger is a boka With a body count
+                    goat's pussy. This is why tiger is a boka With a body count
                     of over 300 including goats and dogs and cats, tiger is the
                     ultimate player boy. This t shirt pays homage to his public
                     property dick and ass and glorifies his previous
@@ -301,8 +341,8 @@ function App() {
                     Tigers knows he is ugly but still stands tall and confident
                     and strong. He is an epitome of loving yourself. This is why
                     he lives by the motto whoever you are be yourself To
-                    compliment his this t shirt is only available in black and
-                    the size large
+                    compliment his dick. This t shirt is only available in black
+                    and the size large
                   </Typography>
                 </CardContent>
               </CardActionArea>
